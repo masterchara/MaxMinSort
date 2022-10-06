@@ -1,0 +1,39 @@
+ ------------------
+ Symbol  | Location
+ --------+---------
+ Ctr     |   08B
+ Else1   |   009
+ Else2   |   017
+ Else3   |   024
+ Else4   |   031
+ Else5   |   03E
+ Else6   |   04B
+ Else7   |   058
+ Else8   |   065
+ Else9   |   072
+ Endif   |   07A
+ If1     |   004
+ If2     |   012
+ If3     |   01F
+ If4     |   02C
+ If5     |   039
+ If6     |   046
+ If7     |   053
+ If8     |   060
+ If9     |   06D
+ Loop    |   003
+ Num     |   08C
+ One     |   08D
+ Temp    |   08A
+ Value1  |   080
+ Value10 |   089
+ Value2  |   081
+ Value3  |   082
+ Value4  |   083
+ Value5  |   084
+ Value6  |   085
+ Value7  |   086
+ Value8  |   087
+ Value9  |   088
+ Zero    |   08E
+

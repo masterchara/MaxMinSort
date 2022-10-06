@@ -1,0 +1,215 @@
+     Assembly listing for: Bui.mas
+                Assembled: Wed Oct 05 22:23:12 EDT 2022
+
+000 108C |          LOAD Num          /Load number of items
+001 408D |          SUBT One          /Decrement
+002 208B |          STORE Ctr         /Store vaue in Ctr
+         |                            
+003 108E |  Loop    LOAD Zero         /Loop Starts
+         |                            
+004 1080 |  If1     LOAD Value1       //Compare values
+005 4081 |          SUBT Value2        
+006 8800 |          SKIPCOND 800      //if value 1 is bigger
+007 9009 |          JUMP Else1         
+008 9012 |          JUMP If2           
+009 1080 |  Else1   LOAD Value1        
+00A 208A |          STORE Temp        //Store value 1 in temp
+00B 1080 |          LOAD Value1        
+00C 4080 |          SUBT Value1        
+00D 3081 |          ADD Value2        //Value 2 is now in value 1 position
+00E 2080 |          STORE Value1       
+00F 108A |          LOAD Temp         //Has value 1
+010 2081 |          STORE Value2      //Store it in value 2 since smaller
+011 9012 |          JUMP If2           
+         |                            
+012 1081 |  If2     LOAD Value2       //Compare values
+013 4082 |          SUBT Value3        
+014 8800 |          SKIPCOND 800      //if value 2 is bigger
+015 9017 |          JUMP Else2         
+016 901F |          JUMP If3           
+017 1081 |  Else2   LOAD Value2        
+018 208A |          STORE Temp        //Store value 2 in temp
+019 4081 |          SUBT Value2        
+01A 3082 |          ADD Value3        //Value 3 is now in value 2 position
+01B 2081 |          STORE Value2       
+01C 108A |          LOAD Temp         //Has value 2
+01D 2082 |          STORE Value3      //Store it in value 3 since smaller
+01E 901F |          JUMP If3           
+         |                            
+01F 1082 |  If3     LOAD Value3       //Compare values
+020 4083 |          SUBT Value4        
+021 8800 |          SKIPCOND 800      //if value 3 is bigger
+022 9024 |          JUMP Else3         
+023 902C |          JUMP If4           
+024 1082 |  Else3   LOAD Value3        
+025 208A |          STORE Temp        //Store value 3 in temp
+026 4082 |          SUBT Value3        
+027 3083 |          ADD Value4        //Value 4 is now in value 3 position
+028 2082 |          STORE Value3       
+029 108A |          LOAD Temp         //Has value 3
+02A 2083 |          STORE Value4      //Store it in value 4 since smaller
+02B 902C |          JUMP If4           
+         |                            
+02C 1083 |  If4     LOAD Value4       //Compare values
+02D 4083 |          SUBT Value4        
+02E 8800 |          SKIPCOND 800      //if value 4 is bigger
+02F 9031 |          JUMP Else4         
+030 9039 |          JUMP If5           
+031 1083 |  Else4   LOAD Value4        
+032 208A |          STORE Temp        //Store value 4 in temp
+033 4083 |          SUBT Value4        
+034 3084 |          ADD Value5        //Value 5 is now in value 4 position
+035 2083 |          STORE Value4       
+036 108A |          LOAD Temp         //Has value 4
+037 2084 |          STORE Value5      //Store it in value 5 since smaller
+038 9039 |          JUMP If5           
+         |                            
+039 1084 |  If5     LOAD Value5       //Compare values
+03A 4085 |          SUBT Value6        
+03B 8800 |          SKIPCOND 800      //if value 5 is bigger
+03C 903E |          JUMP Else5         
+03D 9046 |          JUMP If6           
+03E 1084 |  Else5   LOAD Value5        
+03F 208A |          STORE Temp        //Store value 5 in temp
+040 4084 |          SUBT Value5        
+041 3085 |          ADD Value6        //Value 6 is now in value 5 position
+042 2084 |          STORE Value5       
+043 108A |          LOAD Temp         //Has value 5
+044 2085 |          STORE Value6      //Store it in value 6 since smaller
+045 9046 |          JUMP If6           
+         |                            
+046 1085 |  If6     LOAD Value6       //Compare values
+047 4086 |          SUBT Value7        
+048 8800 |          SKIPCOND 800      //if value 6 is bigger
+049 904B |          JUMP Else6         
+04A 9053 |          JUMP If7           
+04B 1085 |  Else6   LOAD Value6        
+04C 208A |          STORE Temp        //Store value 6 in temp
+04D 4085 |          SUBT Value6        
+04E 3086 |          ADD Value7        //Value 7 is now in value 6 position
+04F 2085 |          STORE Value6       
+050 108A |          LOAD Temp         //Has value 6
+051 2086 |          STORE Value7      //Store it in value 7 since smaller
+052 9053 |          JUMP If7           
+         |                            
+053 1086 |  If7     LOAD Value7       //Compare values
+054 4087 |          SUBT Value8        
+055 8800 |          SKIPCOND 800      //if value 7 is bigger
+056 9058 |          JUMP Else7         
+057 9060 |          JUMP If8           
+058 1086 |  Else7   LOAD Value7        
+059 208A |          STORE Temp        //Store value 7 in temp
+05A 4086 |          SUBT Value7        
+05B 3087 |          ADD Value8        //Value 8 is now in value 7 position
+05C 2086 |          STORE Value7       
+05D 108A |          LOAD Temp         //Has value 7
+05E 2087 |          STORE Value8      //Store it in value 8 since smaller
+05F 9060 |          JUMP If8           
+         |                            
+060 1087 |  If8     LOAD Value8       //Compare values
+061 4088 |          SUBT Value9        
+062 8800 |          SKIPCOND 800      //if value 8 is bigger
+063 9065 |          JUMP Else8         
+064 906D |          JUMP If9           
+065 1087 |  Else8   LOAD Value8        
+066 208A |          STORE Temp        //Store value 8 in temp
+067 4087 |          SUBT Value8        
+068 3088 |          ADD Value9        //Value 9 is now in value 8 position
+069 2087 |          STORE Value8       
+06A 108A |          LOAD Temp         //Has value 8
+06B 2088 |          STORE Value9      //Store it in value 9 since smaller
+06C 906D |          JUMP If9           
+         |                            
+06D 1088 |  If9     LOAD Value9       //Compare values
+06E 4089 |          SUBT Value10       
+06F 8800 |          SKIPCOND 800      //if value 9 is bigger
+070 9072 |          JUMP Else9         
+071 907A |          JUMP Endif         
+072 1088 |  Else9   LOAD Value9        
+073 208A |          STORE Temp        //Store value 9 in temp
+074 4088 |          SUBT Value9        
+075 3089 |          ADD Value10       //Value 10 is now in value 9 position
+076 2088 |          STORE Value9       
+077 108A |          LOAD Temp         //Has value 9
+078 2089 |          STORE Value10     //Store it in value 10 since smaller
+079 907A |          JUMP Endif         
+         |                            
+07A 108B |  Endif   LOAD Ctr          //End the if comparisons then redo loop 10 times, and comparison 10 times total
+         |                            /Loop stuff
+07B 408D |          SUBT One          /Decrement 1
+07C 208B |          STORE Ctr         /Store in control variable
+07D 8000 |          SKIPCOND 000      /if control variable < 0
+07E 9003 |          JUMP Loop         /Otherwise go to loop
+07F 7000 |          HALT              /Terminate program
+         |                            
+         |                            /Stored Numbers to sort
+080 0005 |  Value1  HEX 5              
+081 0035 |  Value2  HEX 35             
+082 0075 |  Value3  HEX 75             
+083 0045 |  Value4  HEX 45             
+084 0085 |  Value5  HEX 85             
+085 0025 |  Value6  HEX 25             
+086 0095 |  Value7  HEX 95             
+087 0055 |  Value8  HEX 55             
+088 0015 |  Value9  HEX 15             
+089 0065 |  Value10 HEX 65             
+08A 0000 |  Temp    DEC 0             //Temp to hold values
+         |                            /Loop Variables
+08B 0000 |  Ctr     DEC 0             /Loop control variable
+08C 000A |  Num     DEC 10            /Times to loop
+08D 0001 |  One     DEC 1             /Decrement by 1
+08E 0000 |  Zero    DEC 0             /Initiate zero
+
+Assembly successful.
+
+         SYMBOL TABLE
+         ---------------------------------------------------
+          Symbol  | Defined | References 
+         ---------+---------+-------------------------------
+          Ctr     |   08B   | 002, 07A, 07C
+          Else1   |   009   | 007
+          Else2   |   017   | 015
+          Else3   |   024   | 022
+          Else4   |   031   | 02F
+          Else5   |   03E   | 03C
+          Else6   |   04B   | 049
+          Else7   |   058   | 056
+          Else8   |   065   | 063
+          Else9   |   072   | 070
+          Endif   |   07A   | 071, 079
+          If1     |   004   | 
+          If2     |   012   | 008, 011
+          If3     |   01F   | 016, 01E
+          If4     |   02C   | 023, 02B
+          If5     |   039   | 030, 038
+          If6     |   046   | 03D, 045
+          If7     |   053   | 04A, 052
+          If8     |   060   | 057, 05F
+          If9     |   06D   | 064, 06C
+          Loop    |   003   | 07E
+          Num     |   08C   | 000
+          One     |   08D   | 001, 07B
+          Temp    |   08A   | 00A, 00F, 018, 01C, 025, 029, 
+                  |         | 032, 036, 03F, 043, 04C, 050, 
+                  |         | 059, 05D, 066, 06A, 073, 077
+          Value1  |   080   | 004, 009, 00B, 00C, 00E
+          Value10 |   089   | 06E, 075, 078
+          Value2  |   081   | 005, 00D, 010, 012, 017, 019, 
+                  |         | 01B
+          Value3  |   082   | 013, 01A, 01D, 01F, 024, 026, 
+                  |         | 028
+          Value4  |   083   | 020, 027, 02A, 02C, 02D, 031, 
+                  |         | 033, 035
+          Value5  |   084   | 034, 037, 039, 03E, 040, 042
+          Value6  |   085   | 03A, 041, 044, 046, 04B, 04D, 
+                  |         | 04F
+          Value7  |   086   | 047, 04E, 051, 053, 058, 05A, 
+                  |         | 05C
+          Value8  |   087   | 054, 05B, 05E, 060, 065, 067, 
+                  |         | 069
+          Value9  |   088   | 061, 068, 06B, 06D, 072, 074, 
+                  |         | 076
+          Zero    |   08E   | 003
+         ---------------------------------------------------
+
+

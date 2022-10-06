@@ -1,0 +1,158 @@
+Load Num /Load number of items
+Subt One /Decrement
+Store Ctr /Store vaue in Ctr
+
+Loop, Load Zero /Loop Starts
+
+If1, Load Value1 //Compare values
+Subt Value2
+Skipcond 800 //if value 1 is bigger
+Jump Else1
+Jump If2
+Else1, Load Value1
+Store Temp //Store value 1 in temp
+Load Value1
+Subt Value1
+Add Value2 //Value 2 is now in value 1 position
+Store Value1
+Load Temp //Has value 1
+Store Value2 //Store it in value 2 since smaller
+Jump If2
+
+If2, Load Value2 //Compare values
+Subt Value3
+Skipcond 800 //if value 2 is bigger
+Jump Else2
+Jump If3
+Else2, Load Value2
+Store Temp //Store value 2 in temp
+Subt Value2
+Add Value3 //Value 3 is now in value 2 position
+Store Value2
+Load Temp //Has value 2
+Store Value3 //Store it in value 3 since smaller
+Jump If3
+
+If3, Load Value3 //Compare values
+Subt Value4
+Skipcond 800 //if value 3 is bigger
+Jump Else3
+Jump If4
+Else3, Load Value3
+Store Temp //Store value 3 in temp
+Subt Value3
+Add Value4 //Value 4 is now in value 3 position
+Store Value3
+Load Temp //Has value 3
+Store Value4 //Store it in value 4 since smaller
+Jump If4
+
+If4, Load Value4 //Compare values
+Subt Value4
+Skipcond 800 //if value 4 is bigger
+Jump Else4
+Jump If5
+Else4, Load Value4
+Store Temp //Store value 4 in temp
+Subt Value4
+Add Value5 //Value 5 is now in value 4 position
+Store Value4
+Load Temp //Has value 4
+Store Value5 //Store it in value 5 since smaller
+Jump If5
+
+If5, Load Value5 //Compare values
+Subt Value6
+Skipcond 800 //if value 5 is bigger
+Jump Else5
+Jump If6
+Else5, Load Value5
+Store Temp //Store value 5 in temp
+Subt Value5
+Add Value6 //Value 6 is now in value 5 position
+Store Value5
+Load Temp //Has value 5
+Store Value6 //Store it in value 6 since smaller
+Jump If6
+
+If6, Load Value6 //Compare values
+Subt Value7
+Skipcond 800 //if value 6 is bigger
+Jump Else6
+Jump If7
+Else6, Load Value6
+Store Temp //Store value 6 in temp
+Subt Value6
+Add Value7 //Value 7 is now in value 6 position
+Store Value6
+Load Temp //Has value 6
+Store Value7 //Store it in value 7 since smaller
+Jump If7
+
+If7, Load Value7 //Compare values
+Subt Value8
+Skipcond 800 //if value 7 is bigger
+Jump Else7
+Jump If8
+Else7, Load Value7
+Store Temp //Store value 7 in temp
+Subt Value7
+Add Value8 //Value 8 is now in value 7 position
+Store Value7
+Load Temp //Has value 7
+Store Value8 //Store it in value 8 since smaller
+Jump If8
+
+If8, Load Value8 //Compare values
+Subt Value9
+Skipcond 800 //if value 8 is bigger
+Jump Else8
+Jump If9
+Else8, Load Value8
+Store Temp //Store value 8 in temp
+Subt Value8
+Add Value9 //Value 9 is now in value 8 position
+Store Value8
+Load Temp //Has value 8
+Store Value9 //Store it in value 9 since smaller
+Jump If9
+
+If9, Load Value9 //Compare values
+Subt Value10
+Skipcond 800 //if value 9 is bigger
+Jump Else9
+Jump Endif
+Else9, Load Value9
+Store Temp //Store value 9 in temp
+Subt Value9
+Add Value10 //Value 10 is now in value 9 position
+Store Value9
+Load Temp //Has value 9
+Store Value10 //Store it in value 10 since smaller
+Jump Endif
+
+Endif, Load Ctr //End the if comparisons then redo loop 10 times, and comparison 10 times total
+/Loop stuff
+Subt One /Decrement 1
+Store Ctr /Store in control variable
+Skipcond 000 /if control variable < 0
+Jump Loop /Otherwise go to loop
+Halt /Terminate program
+
+/Stored Numbers to sort
+Value1, HEX 5
+Value2, HEX 35
+Value3, HEX 75
+Value4, HEX 45
+Value5, HEX 85
+Value6, HEX 25
+Value7, HEX 95
+Value8, HEX 55
+Value9, HEX 15
+Value10, HEX 65
+Temp, DEC 0 //Temp to hold values
+/Loop Variables
+Ctr, DEC 0 /Loop control variable
+Num, DEC 10 /Times to loop
+One, DEC 1 /Decrement by 1
+Zero, DEC 0 /Initiate zero
